@@ -1,0 +1,52 @@
+<section>
+
+    <div class="container-fluid">
+
+      <div class="row " id="bookh">
+        <div class="text-center">
+          <p style=" font-size: 5vw;">BOOKS</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  {{!--// bookheading --}}
+
+
+  {{!-- books --}}
+  <div class="container" style="width: 900px;">
+    <div class="row">
+      <div class=" col-md-12 ">
+        <div class="top-spacer">
+
+
+          <!--addbook-->
+          <div id="login-box" >
+            <div class=" left">
+            <form method="POST" action="/addbook">
+              <h1>Add Book</h1>
+              <br>
+
+              <input id="email" type="text" name="bookName" placeholder="BookName" value="{{Addbooks.bookName}}" />
+              <div id="msg" style="font-size: 15px;  margin-top: -10px; margin-bottom: 10px;"> </div>
+              <input id="pass" type="text" name="authorName" placeholder="AuthorName" value=" {{Addbooks.authorName}}" />
+              <div id="msg1" style="font-size: 15px;  margin-top: -10px; margin-bottom: 10px;"> </div>
+
+              <input class="form-control form-control-sm" id="formFileSm" type="file" name="image" value=" {{Addbooks.image}}" />
+              <input id="submit" type="submit"   />
+          </div>
+
+
+          </form>
+
+        </div>
+
+        <!--/login-->
+
+      </div>
+    </div>
+  </div>
+  </div>
+  <!-- /cont -->
+  </div>

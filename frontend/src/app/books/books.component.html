@@ -1,0 +1,73 @@
+<section>
+
+    <div class="container-fluid">
+
+      <div class="row " id="bookh">
+        <div class="text-center">
+          <p style=" font-size: 5vw;">BOOKS</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  {{!--// bookheading --}}
+
+
+  {{!-- books --}}
+  <div class="container" style="width: 900px;">
+    <div class="row">
+      <div class=" col-md-12 ">
+        <div class="top-spacer">
+
+          <div class="container">
+
+            
+              {{!-- {{#each list}}
+              <h1>{{this.bookName}}</h1>
+              <script>
+                console.log(this.bookName)
+              </script>
+              {{/each}} --}}
+
+              {{#each list}}
+
+            <div class="row " style="padding-top: 20px;">
+              <div class=" col-6 col-md-3 col-xl-2 text-center" style=" margin-bottom: 20px; ">
+                <img
+                  src="{{this.image}}"
+                  class="img-fluid " alt="Responsive image" style="max-width: 100%; height: 160px;  ">
+              </div>
+              <div class=" col-md-9 col-xl-10" style="padding-top: 20px;" >
+                <h4 style="font-family: Comic Sans MS; ">{{this.bookName}}</h4>
+                <div class="row">
+                  <div class="col-9">
+                    <h5 style="font-size: 2vw"><span class="label label-default ">{{this.authorName}}</span></h5>
+                  </div>
+                    <a href="{{this._id}}" onclick="return confirm('Are you sure to delete this record ?');"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
+                </div>
+              </div>
+            </div>
+          
+            <div style="border: 1px solid rgb(190, 189, 189);">
+              {{!-- /employee/delete/{{this._id}} --}}
+            </div>
+            {{/each}} 
+           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /cont -->
+  </div>
+
+{{!-- /books --}}
+
+
+{{!-- add book --}}
+
+<div class="row text-center">
+  <div class="col-xl-12 " style="padding-top: 10px;">
+<a href="/addbook"> <button type="button" class="btn btn-danger">Add Book</button></a>
+  </div>
+</div>
